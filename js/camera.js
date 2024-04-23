@@ -11,9 +11,9 @@ function camera() {
     audio: false,
     video: {
       facingMode,
-      width: 960,
-      height: 960 * 1.333,
-      aspectRatio: { ideal: 1.333 },
+      width: window.innerWidth * 2,
+      height: window.innerHeight * 2,
+      aspectRatio: 1.777777778,
       focusMode: 'single-shot',
       exposureMode: 'single-shot'
     }
@@ -26,7 +26,7 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = "100%";
+      video.style.height = window.innerHeight;
       video.srcObject = stream;
       try {
         appHeight()
