@@ -13,7 +13,7 @@ function camera() {
       facingMode: facingMode,
       width: { ideal: window.innerWidth * 2 },
       height: { ideal: window.innerHeight * 2 },
-      aspectRatio: { ideal: window.innerWidth / window.innerHeight },
+      aspectRatio: { exact: window.innerWidth / window.innerHeight },
     },
   };
   navigator.mediaDevices
