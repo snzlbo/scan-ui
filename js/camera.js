@@ -14,14 +14,15 @@ function camera() {
       width: 1920,
       // height: 720 * 1.333
     },
+    zoom: false
   };
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then((stream) => {
-      const capabilities = track.getCapabilities();
-      const settings = track.getSettings();
-      console.log('settings: ', settings);
-      console.log('capabilities: ', capabilities);
+      const settings = stream.getVideoTracks()[0].getSettings();
+      console.log(settings);
+      const capabilities = stream.getVideoTracks()[0].getCapabilities();
+      console.log(capabilities);
       video.setAttribute("autoplay", "");
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
