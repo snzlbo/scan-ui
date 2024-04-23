@@ -11,7 +11,7 @@ function camera() {
     audio: false,
     video: {
       facingMode: facingMode,
-      width: 1920,
+      // width: 1920,
       // height: 720 * 1.333
     },
     zoom: 1,
@@ -27,7 +27,7 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = 'calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)'
+      video.height = window.innerHeight
       video.srcObject = stream;
       try {
         appHeight()
