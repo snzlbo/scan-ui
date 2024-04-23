@@ -26,7 +26,7 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = 'calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)'
+      video.style.height = "100%";
       video.srcObject = stream;
       try {
         appHeight()
