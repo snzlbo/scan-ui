@@ -11,7 +11,7 @@ function camera() {
     audio: false,
     video: {
       facingMode: facingMode,
-      width: 1920,
+      // width: 720,
       // height: 720 * 1.333
     },
     zoom: 1,
@@ -19,15 +19,11 @@ function camera() {
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then((stream) => {
-      const settings = stream.getVideoTracks()[0].getSettings();
-      console.log(settings);
-      const capabilities = stream.getVideoTracks()[0].getCapabilities();
-      console.log(capabilities);
       video.setAttribute("autoplay", "");
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.height = window.innerHeight
+      video.style.height = 'calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)'
       video.srcObject = stream;
       try {
         appHeight()
