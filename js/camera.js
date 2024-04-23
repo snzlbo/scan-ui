@@ -12,7 +12,8 @@ function camera() {
     video: {
       facingMode: facingMode,
       width: { ideal: window.innerWidth * 2 },
-      height: { ideal: window.innerHeight * 2 }
+      height: { ideal: window.innerHeight * 2 },
+      aspectRatio: { ideal: window.innerWidth / window.innerHeight },
     },
   };
   navigator.mediaDevices

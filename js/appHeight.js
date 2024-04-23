@@ -6,7 +6,6 @@ function appHeight() {
     doc.style.setProperty('--app-height', `${currentHeight}px`)
     const videoTag = document.getElementById('video')
     videoTag.style.height = `calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)`
-    videoTag.style.display = 'none';  // Trigger repaint
     setTimeout(() => {
         videoTag.style.display = 'none';  // Trigger repaint
         videoTag.offsetHeight;  // Force reflow
