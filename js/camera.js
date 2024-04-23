@@ -14,7 +14,6 @@ function camera() {
       // width: 720,
       // height: 720 * 1.333
     },
-    zoom: 1,
   };
   navigator.mediaDevices
     .getUserMedia(constraints)
