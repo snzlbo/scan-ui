@@ -11,9 +11,12 @@ function camera() {
     audio: false,
     video: {
       facingMode: facingMode,
+      width: { ideal: window.innerWidth * 2 },
+      height: { ideal: window.innerHeight * 2 },
       aspectRatio: { exact: window.innerWidth / window.innerHeight },
     },
   };
+  console.log(constraints);
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then((stream) => {
