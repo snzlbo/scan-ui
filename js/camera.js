@@ -10,15 +10,11 @@ function camera() {
   const constraints = {
     audio: false,
     video: {
-      facingMode,
-      width: window.innerWidth * 2,
-      height: window.innerHeight * 2,
-      aspectRatio: 1.777777778,
-      focusMode: 'single-shot',
-      exposureMode: 'single-shot'
-    }
+      facingMode: facingMode,
+      // width: 720,
+      // height: 720 * 1.333
+    },
   };
-  console.log(constraints);
   navigator.mediaDevices
     .getUserMedia(constraints)
     .then((stream) => {
@@ -26,7 +22,7 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = window.innerHeight;
+      video.style.height = 'calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)'
       video.srcObject = stream;
       try {
         appHeight()

@@ -44,7 +44,10 @@ canvas {
   height: calc(var(--app-height) - 60px);
   height: calc(var(--app-height) - 60px - env(safe-area-inset-top) - env(safe-area-inset-bottom));
   object-fit: cover;
-  background-size: cover;
+  object-position: center;
+  bottom: 0;
+  left: 0;
+  /* margin-left: 0; */
 }
 
 .guide {
