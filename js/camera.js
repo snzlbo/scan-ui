@@ -10,11 +10,13 @@ function camera() {
   const constraints = {
     audio: false,
     video: {
-      facingMode: facingMode,
-      width: { ideal: window.innerWidth * 2 },
-      height: { ideal: window.innerHeight * 2 },
-      aspectRatio: { exact: window.innerWidth / window.innerHeight },
-    },
+      facingMode,
+      width: 960,
+      height: 960 * 1.333,
+      aspectRatio: { ideal: 1.333 },
+      focusMode: 'single-shot',
+      exposureMode: 'single-shot'
+    }
   };
   console.log(constraints);
   navigator.mediaDevices
