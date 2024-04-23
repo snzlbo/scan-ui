@@ -11,7 +11,7 @@ function camera() {
     audio: false,
     video: {
       facingMode: facingMode,
-      // width: 720,
+      width: 1920,
       // height: 720 * 1.333
     },
   };
