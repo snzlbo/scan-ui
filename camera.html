@@ -81,7 +81,6 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   ></script>
-  <script src="./js/appHeight.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/globals.js"></script>
   <script src="./js/camera.js"></script>
@@ -117,9 +116,6 @@
       productModelCheckLimit = parseFloat(params.productModelCheckLimit);
     }
     console.log("🚀 ~ checkPeriod:", checkPeriod)
-    if (document.readyState !== 'loading') {
-      appHeight();
-    }
 
     document.addEventListener("DOMContentLoaded", async function () {
       preloadBasedOnDate()
@@ -133,8 +129,6 @@
         loadTensorFlowModel(FACE_MODEL_DB_PATH, FACE_MODEL_FILE_PATH),
       ]);
       camera();
-      appHeight();
-      // appHeight();
       // DA reserved end
       // interval
       (function pollingProductDetection() {
@@ -160,7 +154,6 @@
       let loadingText = document.getElementById("loading_text");
       if (loadingText) {
         loadingText.parentNode.removeChild(loadingText);
-        appHeight()
       }
       // !!remove
       console.log("🚀 ~ limitTime:", limitTime)

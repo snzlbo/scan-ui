@@ -22,13 +22,8 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = 'calc(var(--app-height) - env(safe-area-inset-top) - env(safe-area-inset-bottom) - 60px)'
+      video.style.height = window.innerHeight;
       video.srcObject = stream;
-      try {
-        appHeight()
-      } catch (error) {
-        
-      }
     })
     .catch(() => {
       // device don't support camera → write link function here
