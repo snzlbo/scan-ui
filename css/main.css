@@ -9,13 +9,12 @@ body {
   font-family: "Noto Sans JP", sans-serif;
   width: 100vw;
   height: -webkit-fill-available;
+  height: 100dvh;
   height: 100vh;
   overflow: hidden;
 }
 
 body {
-  /* width: 100vw;
-  height: 100vh; */
   max-height: -webkit-fill-available;
   overflow: hidden;
 }
@@ -24,7 +23,6 @@ canvas {
   display: none;
 }
 .animation {
-  /* height: 45vh; */
   height: auto;
   z-index: 2;
   width: 100vw;
@@ -38,6 +36,7 @@ canvas {
 #video {
   position: fixed;
   width: 100vw;
+  height: calc(100dvh - 60px);
   height: calc(100vh - 60px);
   object-fit: cover;
   object-position: center;
@@ -47,6 +46,7 @@ canvas {
 }
 
 .guide {
+  height: 100dvh;
   height: 100vh;
 }
 
@@ -78,6 +78,7 @@ canvas {
   color: #fff;
   width: 100vw;
   height: -webkit-fill-available;
+  height: 100dvh - 60px;
   height: 100vh - 60px;
 }
 
@@ -119,6 +120,7 @@ canvas {
 }
 
 .camera__wrapper {
+  height: calc(100dvh - 60px);
   height: calc(100vh - 60px);
   bottom: 0;
 }
@@ -128,6 +130,7 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: calc(100dvh - 60px);
   height: calc(100vh - 60px);
   width: 100%;
 }
@@ -140,7 +143,6 @@ canvas {
 }
 
 .outline {
-  /* height: 45vh; */
   height: 45%;
   z-index: 2;
   width: auto;
@@ -209,7 +211,6 @@ canvas {
 }
 
 .guide-img {
-  /*height: 10vh;*/
   margin-top: 2vh;
   height: auto;
   width: calc(100% - 15%);
@@ -319,8 +320,6 @@ canvas {
 }
 
 .take-button-img {
-  /*width: 7vh;
-  height: 7vh;*/
   width: 7.5vh;
   height: 7.5vh;
 }
@@ -345,7 +344,6 @@ canvas {
 }
 
 .take-guide-img {
-  /* width: 45vh; */
   width: calc(100% - 36vw);
   max-width: 280px;
 }
@@ -365,8 +363,6 @@ canvas {
 
 .countdown-img {
   margin: 0 auto;
-  /*width: 7vh;
-  height: 7vh;*/
   padding-bottom: 5px;
   width: 7.5vh;
   height: 7.5vh;
