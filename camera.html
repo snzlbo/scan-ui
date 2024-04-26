@@ -156,14 +156,14 @@
         loadingText.parentNode.removeChild(loadingText);
       }
       // !!remove
-      console.log("🚀 ~ limitTime:", limitTime)
-      console.log(" ---- faceModelCheckLimit:", faceModelCheckLimit)
-      console.log(" ---- productModelCheckLimit:", productModelCheckLimit)
-      console.log(" ---- checkPeriod:", checkPeriod)
+      // console.log("🚀 ~ limitTime:", limitTime)
+      // console.log(" ---- faceModelCheckLimit:", faceModelCheckLimit)
+      // console.log(" ---- productModelCheckLimit:", productModelCheckLimit)
+      // console.log(" ---- checkPeriod:", checkPeriod)
       if (mainModel) {
         if (limitTime * checkPeriod < ((checkPeriod % 1000) ? (checkPeriod/1000) : 1) * 60 * 1000) {
           checkProductTFJS(canvas, video, mainModel).then(async (result) => {
-            console.log("🚀 ~ checkProductTFJS:", result)
+            // console.log("🚀 ~ checkProductTFJS:", result)
             productConfidenceResult = result;
           // DA reserved end
           });
@@ -179,7 +179,7 @@
       if (faceModel) {
         if (limitTime * checkPeriod < ((checkPeriod % 1000) ? (checkPeriod/1000) : 1) * 60 * 1000) {
           checkFaceTFJS(canvas, video, faceModel).then(async (result) => {
-            console.log("🚀 ~ checkFaceTFJS:", result)
+            // console.log("🚀 ~ checkFaceTFJS:", result)
             // if (result.product > 0.45) {
             if (result > faceModelCheckLimit) {
               errorImgElement.classList.remove("hidden");
