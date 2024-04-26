@@ -22,7 +22,6 @@ function camera() {
       video.setAttribute("muted", "");
       video.setAttribute("playsinline", "");
       video.width = window.innerWidth;
-      video.style.height = window.innerHeight - 60;
       video.srcObject = stream;
     })
     .catch(() => {
